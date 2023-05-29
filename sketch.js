@@ -11,7 +11,7 @@ var balls = [] //宣告balls為一群陣列，把產生“所有”的物件
 //+++++++++++設定飛彈物件的變數++++++++++++++++++++++++++++++++++
 var bullet
 var bullets = []
-var maxBulletCount = 45 // 最大子彈量
+var maxBulletCount = 40 // 最大子彈量
 var remainingBullets = maxBulletCount//計算子彈數量
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
@@ -113,7 +113,7 @@ function draw() {//每秒執行60次
   }
   
 
-//魚的顯示(打到魚加3分)
+//魚的顯示(打到魚加4分)
   for (let monster of monsters){//針對陣列變數，取出陣列內一個一個的物件
     if(monster.dead == true && monster.timenum>4){
       monsters.splice(monsters.indexOf(monster),1)//從倉庫中取出，只取一個
@@ -124,7 +124,7 @@ function draw() {//每秒執行60次
       if(monster.isBallInRanger(bullet.p.x,bullet.p.y)){//飛彈物件有沒有接觸現在的魚
         // monsters.splice(monsters.indexOf(monster),1)//從倉庫魚取出被滑鼠按到的物件，只取一個
         bullets.splice(bullets.indexOf(bullet),1)
-        score = score + 3
+        score = score + 4
         monster.dead = true
         //elephant_sound.play()
       }
