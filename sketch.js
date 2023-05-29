@@ -11,7 +11,7 @@ var balls = [] //宣告balls為一群陣列，把產生“所有”的物件
 //+++++++++++設定飛彈物件的變數++++++++++++++++++++++++++++++++++
 var bullet
 var bullets = []
-var maxBulletCount = 30 // 最大子彈量
+var maxBulletCount = 45 // 最大子彈量
 var remainingBullets = maxBulletCount//計算子彈數量
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
